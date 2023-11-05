@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "../styles/CartModal.module.css";
+import { useValue } from "../itemContext";
+
 
 function CartModal() {
+  const {toggle, clear}=useValue();
   return (
     <div className={styles.cartModal}>
       <div className={styles.closeButton} onClick={toggle}>
